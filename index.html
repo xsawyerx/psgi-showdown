@@ -1,0 +1,192 @@
+<html>
+    <head>
+        <title>PSGI servers breakdown</title>
+        <link rel="stylesheet" type="text/css" href="css/ui.css"/>
+    </head>
+<body>
+
+<table>
+    <tr>
+        <td></td>
+        <td class="ui-message ui-message-black">Corona</td>
+        <td class="ui-message ui-message-black">FCGI::Async</td>
+        <td class="ui-message ui-message-black">FCGI::Engine::PSGI</td>
+        <td class="ui-message ui-message-black">Feersum</td>
+        <td class="ui-message ui-message-black">Gepok</td>
+        <td class="ui-message ui-message-black">HTTP::Server::PSGI</td>
+        <td class="ui-message ui-message-black">HTTP::Server::Simple::PSGI</td>
+        <td class="ui-message ui-message-black">POE::Component::Server::PSGI</td>
+        <td class="ui-message ui-message-black">Perlbal::Plugin::PSGI</td>
+        <td class="ui-message ui-message-black">Starlet</td>
+        <td class="ui-message ui-message-black">Starman</td>
+        <td class="ui-message ui-message-black">Tatsumaki</td>
+        <td class="ui-message ui-message-black">Twiggy</td>
+        <td class="ui-message ui-message-black">Web::Simple</td>
+    </tr>
+
+        <tr>
+        <td class="ui-message ui-message-black">psgi.version</td>
+        <td class="ui-message ui-message-blue">1.0</td>
+        <td class="ui-message ui-message-blue">1.0</td>
+        <td class="ui-message ui-message-blue">1.0</td>
+        <td class="ui-message ui-message-blue">1.0</td>
+        <td class="ui-message ui-message-blue">1.1</td>
+        <td class="ui-message ui-message-blue">1.1</td>
+        <td class="ui-message ui-message-blue">1.1</td>
+        <td class="ui-message ui-message-blue"></td>
+        <td class="ui-message ui-message-blue">1.0</td>
+        <td class="ui-message ui-message-blue">1.1</td>
+        <td class="ui-message ui-message-blue">1.1</td>
+        <td class="ui-message ui-message-blue">1.0</td>
+        <td class="ui-message ui-message-blue">1.0</td>
+        <td class="ui-message ui-message-blue">1.0</td>
+        </tr>
+        <tr>
+        <td class="ui-message ui-message-black">psgi.run_once</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        </tr>
+        <tr>
+        <td class="ui-message ui-message-black">psgi.nonblocking</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        </tr>
+        <tr>
+        <td class="ui-message ui-message-black">psgi.multithread</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-red">No</td>
+        </tr>
+        <tr>
+        <td class="ui-message ui-message-black">psgi.multiprocess</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-red">No</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        </tr>
+        <tr>
+        <td class="ui-message ui-message-black">psgi.streaming</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        </tr>
+        <tr>
+        <td class="ui-message ui-message-black">psgix.input.buffered</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        </tr>
+        <tr>
+        <td class="ui-message ui-message-black">psgix.output.buffered</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        </tr>
+        <tr>
+        <td class="ui-message ui-message-black">psgix.harakiri</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-green">Yes</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        <td class="ui-message ui-message-yellow">N/A</td>
+        </tr>
+</table>
+
+<br/><br/>
+<p><b>Feersum</b> maintains two additional non-standard <tt>psgix</tt> parameter
+variables:</p>
+
+<ul>
+  <li>- <tt>psgix.body.scalar_refs</tt></li>
+  <li>- <tt>psgix.output.guard</tt><li>
+</ul>
+
+</body>
+</html>
