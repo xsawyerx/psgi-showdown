@@ -1,0 +1,15 @@
+PSGI is awesome. Very awesome!
+
+Now that we have a lot of PSGI servers, it's difficult to know which to pick
+for each task. Each one supports a different combination of PSGI features.
+
+This is a (growing) list of PSGI servers, and the PSGI features they implement.
+
+The list is compiled first by hardcoded data, but later will be done
+dynamically by introspecting the server, and later by having actual tests for
+these features, hopefully. :)
+
+Hope it's useful for you.
+
+P.S.
+I hope to get this hosted at a proper URL at some point.
