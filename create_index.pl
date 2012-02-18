@@ -162,10 +162,15 @@ my %servers = (
     },
 );
 
+# features that are actually supported when off
+my %backward_features = (
+    'psgix.input.buffered' => 1,
+    'psgi.output.buffered' => 1,
+);
+
 my @servers = sort keys %servers;
 
-my %all_data = ();
-
+my %data = ();
 foreach my $param (@parameters) {
     foreach my $server (@servers) {
         my $server_data = $servers{$server};
@@ -183,16 +188,24 @@ foreach my $param (@parameters) {
             $value = join '.', @{$value};
         }
 
-        $all_data{$server}{$param} = $value;
+        if ( defined $value ) {
+            if ($value) {
+                $data{$server}{$param} = [ 'green', 'Yes' ];
+            } else {
+                $data{$server}{$param} = [ 'red', 'No' ];
+            }
+        } else {
+            $data{$server}{$param} = [ 'yellow', 'N/A' ];
+        }
     }
 }
 
 print $tx->render_string(
     $tmpl,
     {
-        params   => \@parameters,
-        servers  => \@servers,
-        all_data => \%all_data,
+        params  => \@parameters,
+        servers => \@servers,
+        data    => \%data,
     },
 );
 
@@ -219,13 +232,7 @@ __DATA__
             : if $param == "psgi.version" {
         <td class="ui-message ui-message-blue"><: $all_data[$server][$param] :></td>
             : } else {
-                : if $all_data[$server][$param] == true {
-        <td class="ui-message ui-message-green">Yes</td>
-                : } elsif $all_data[$server][$param] == 0 {
-        <td class="ui-message ui-message-red">No</td>
-                : } else {
-        <td class="ui-message ui-message-yellow">N/A</td>
-                : }
+        <td class="ui-message ui-message-<: $data[$server][$param][0] :>"><: $data[$server][$param][1] :></td>
             : }
         : }
         </tr>
